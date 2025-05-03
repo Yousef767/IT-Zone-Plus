@@ -3,42 +3,43 @@ import { GlowEffect } from "../GlowEffect";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Variants
+// Variants (خففنا الحركة والمدة)
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 15 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
   }),
 };
 
 const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.95 },
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { delay: i * 0.15, duration: 0.5 },
+    transition: { delay: i * 0.1, duration: 0.4 },
   }),
 };
 
 const slideInLeft = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -25 },
   visible: (i: number) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.15, duration: 0.6 },
+    transition: { delay: i * 0.1, duration: 0.4 },
   }),
 };
 
 const slideInRight = {
-  hidden: { opacity: 0, x: 50 },
+  hidden: { opacity: 0, x: 25 },
   visible: (i: number) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.15, duration: 0.6 },
+    transition: { delay: i * 0.1, duration: 0.4 },
   }),
 };
+
 
 function ITLibrary() {
   useEffect(() => {
@@ -47,7 +48,7 @@ function ITLibrary() {
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true,
   });
 

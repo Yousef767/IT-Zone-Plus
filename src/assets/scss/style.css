@@ -701,15 +701,104 @@ nav {
   height: -moz-fit-content;
   height: fit-content;
 }
-.center .ball {
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-}
-@media (max-width: 900px) {
-  .center .ball {
-    scale: 0.8;
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes floatYLarge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes floatYDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+}
+@keyframes floatX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+}
+@keyframes floatXNegative {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+}
+@keyframes floatXLarge {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+.ball {
+  position: absolute;
+  will-change: transform;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
+}
+
+/* Ball positions + animations */
+.ball1 {
+  top: 40%;
+  left: 25%;
+  animation-name: floatY;
+  animation-duration: 4s;
+}
+
+.ball2 {
+  top: 30%;
+  right: 8%;
+  animation-name: floatX;
+  animation-duration: 5s;
+}
+
+.ball3 {
+  top: 22%;
+  left: 12%;
+  animation-name: floatYDown;
+  animation-duration: 6s;
+}
+
+.ball4 {
+  top: 20%;
+  right: 15%;
+  animation-name: floatXNegative;
+  animation-duration: 5.5s;
+}
+
+.ball5 {
+  top: 15%;
+  right: 25%;
+  animation-name: floatYLarge;
+  animation-duration: 4.5s;
+}
+
+.ball6 {
+  top: 15%;
+  left: 15%;
+  animation-name: floatXLarge;
+  animation-duration: 6.5s;
 }
 
 .bubble {
@@ -865,7 +954,7 @@ nav {
 }
 @media (max-width: 500px) {
   .hero h1 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   .hero p {
     font-size: 0.9em;

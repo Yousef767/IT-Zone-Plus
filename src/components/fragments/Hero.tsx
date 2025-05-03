@@ -32,54 +32,13 @@ const fadeInRight = {
 function Hero() {
   return (
     <div className="center">
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 18.png"
-        alt=""
-        style={{ top: "40%", left: "25%" }}
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 19.png"
-        alt=""
-        style={{ top: "30%", right: "8%" }}
-        animate={{ x: [0, 15, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 20.png"
-        alt=""
-        style={{ top: "22%", left: "12%" }}
-        animate={{ y: [0, 25, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 21.png"
-        alt=""
-        style={{ top: "20%", right: "15%" }}
-        animate={{ x: [0, -15, 0] }}
-        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 22.png"
-        alt=""
-        style={{ top: "15%", right: "25%" }}
-        animate={{ y: [0, -30, 0] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.img
-        className="ball"
-        src="/icons/balls/Ellipse 23.png"
-        alt=""
-        style={{ top: "15%", left: "15%" }}
-        animate={{ x: [0, 20, 0] }}
-        transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
-      />
+<img className="ball ball1" src="/icons/balls/Ellipse 18.png" alt="" />
+<img className="ball ball2" src="/icons/balls/Ellipse 19.png" alt="" />
+<img className="ball ball3" src="/icons/balls/Ellipse 20.png" alt="" />
+<img className="ball ball4" src="/icons/balls/Ellipse 21.png" alt="" />
+<img className="ball ball5" src="/icons/balls/Ellipse 22.png" alt="" />
+<img className="ball ball6" src="/icons/balls/Ellipse 23.png" alt="" />
+
       <motion.div
         className="box hero"
         variants={containerVariants}

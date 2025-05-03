@@ -24,7 +24,7 @@ function Majors() {
   }, []);
 
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); 
 
   useEffect(() => {
     if (inView) controls.start("show");
