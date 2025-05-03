@@ -1,0 +1,50 @@
+.wrapper-404 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 20px;
+  padding-top: 100px;
+  @include flex();
+  position: relative;
+  svg {
+    max-width: 600px;
+  }
+  h1 {
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    top: 40px;
+    color: $mainText;
+  }
+  button {
+    top: 150px;
+    padding: 0 20px;
+    height: 40px;
+    @include flex();
+    gap: 10px;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    //  background-color: $dark;
+    border: 1px solid $mainText;
+    border-radius: 5px;
+    background: linear-gradient(
+      225deg,
+      rgba(33, 130, 147, 0.3) 0%,
+      rgba(3, 70, 76, 0.3) 100%
+    );
+  }
+}
+
+.cls-1 {
+  fill: #03464c;
+}
+
+.cls-2 {
+  fill: #008baac4;
+}
+
+.cls-3 {
+  fill: #008baa;
+}
